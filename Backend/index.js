@@ -53,6 +53,7 @@ app.get("/users",async (req,res) => {
 app.post("/users", async (req,res) => {
     const {body} = req
     const {userinput,password} = body
+    console.log(body)
     const que = `INSERT INTO login_users (username,password) values('${userinput}','${password}');`;
     const response = await db.run(que);
     res.send("User inserted Successfully");
