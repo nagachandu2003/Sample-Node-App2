@@ -107,7 +107,7 @@ class Hello extends Component {
             <p>Delete User</p>
             <input type="text" onChange={this.onChangeUsername} value={userinput}/>
             <button type="button" onClick={this.onDelete}>Delete</button> 
-            <form onSubmit={this.updateData}>
+            <form onSubmit={this.postData}>
                 Username : <input type="text" onChange={this.onChangeUsername} value={userinput}/>
                 Password : <input type="password" onChange={this.onChangePassword} value={password}/>
                 <button type="submit">Add User</button>
