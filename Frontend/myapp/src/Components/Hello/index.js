@@ -9,7 +9,7 @@ class Hello extends Component {
     }
 
     getData = async () => {
-        const response = await fetch("https://sample-node-app-bice.vercel.app/users");
+        const response = await fetch("http://localhost:3002/users");
         const data = await response.json()
         console.log(data);
         this.setState({itemsList:data})
@@ -28,7 +28,7 @@ class Hello extends Component {
             },
             body: JSON.stringify(data) // stringify the JSON data
         };
-        const response = await fetch("https://sample-node-app-bice.vercel.app/users", options);
+        const response = await fetch("http://localhost:3002/users", options);
         if(response.ok)
         console.log("Password Updated Successfully");
         else
@@ -48,7 +48,7 @@ class Hello extends Component {
             },
             body: JSON.stringify(data) // stringify the JSON data
         };
-        const response = await fetch("https://sample-node-app-bice.vercel.app/users", options);
+        const response = await fetch("http://localhost:3002/users", options);
         if(response.ok)
         console.log("User inserted Successfully");
         else
@@ -66,7 +66,7 @@ class Hello extends Component {
         const options = {
             method: "DELETE"
         };
-        const response = await fetch(`https://sample-node-app-bice.vercel.app/users/${userinput}`, options);
+        const response = await fetch(`http://localhost:3002/users/${userinput}`, options);
         if (response.ok) {
             console.log("User deleted successfully");
         } else {
