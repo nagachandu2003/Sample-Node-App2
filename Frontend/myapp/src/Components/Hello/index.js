@@ -9,7 +9,11 @@ class Hello extends Component {
     }
 
     getData = async () => {
+<<<<<<< HEAD
         const response = await fetch("http://localhost:3002/users");
+=======
+        const response = await fetch("https://sample-node-app2.vercel.app/users");
+>>>>>>> 074575f4b29551c4d77395ab33a75bec69887345
         const data = await response.json()
         console.log(data);
         this.setState({itemsList:data})
@@ -28,7 +32,11 @@ class Hello extends Component {
             },
             body: JSON.stringify(data) // stringify the JSON data
         };
+<<<<<<< HEAD
         const response = await fetch("http://localhost:3002/users", options);
+=======
+        const response = await fetch("https://sample-node-app2.vercel.app/users", options);
+>>>>>>> 074575f4b29551c4d77395ab33a75bec69887345
         if(response.ok)
         console.log("Password Updated Successfully");
         else
@@ -41,6 +49,7 @@ class Hello extends Component {
             userinput,
             password
         }
+        console.log(data);
         const options = {
             method: "POST",
             headers: {
@@ -48,7 +57,11 @@ class Hello extends Component {
             },
             body: JSON.stringify(data) // stringify the JSON data
         };
+<<<<<<< HEAD
         const response = await fetch("http://localhost:3002/users", options);
+=======
+        const response = await fetch("https://sample-node-app2.vercel.app/users", options);
+>>>>>>> 074575f4b29551c4d77395ab33a75bec69887345
         if(response.ok)
         console.log("User inserted Successfully");
         else
@@ -66,7 +79,11 @@ class Hello extends Component {
         const options = {
             method: "DELETE"
         };
+<<<<<<< HEAD
         const response = await fetch(`http://localhost:3002/users/${userinput}`, options);
+=======
+        const response = await fetch(`https://sample-node-app2.vercel.app/users/${userinput}`, options);
+>>>>>>> 074575f4b29551c4d77395ab33a75bec69887345
         if (response.ok) {
             console.log("User deleted successfully");
         } else {
@@ -81,8 +98,8 @@ class Hello extends Component {
     
     onSubmitForm = (event) => {
         event.preventDefault();
-        // this.onInsertData();
-        this.updatedData();
+        // this.postData();
+        // this.updatedData();
         this.setState({userinput:'',password:''})
     }
 
